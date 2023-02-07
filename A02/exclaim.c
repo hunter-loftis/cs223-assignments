@@ -36,7 +36,10 @@ int main() {
   for (i=0; i<32;i++) {
     if ((buff[i] > 96) && (buff[i] < 123)) {
       result[i] = randomSymbol();
-    } else { result[i] = buff[i]; }
+    } else { result[i] = buff[i];}
+    if (buff[i]=='\0') {
+      break;
+    }
   }
 
   printf("OMG! %s \n", result);
